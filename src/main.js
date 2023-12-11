@@ -39,15 +39,15 @@ cover.addEventListener("click", function () {
 var btn = document.getElementById("activate");
 activate.addEventListener("click", function () {
 	this.classList.add("pushed");
-	alarm.load();
+	// alarm.load();
 	alarm.currentTime = 10.1;
-	alarm.play();
+	// alarm.play();
 	setTimeout(function () {
 		panel.classList.add("show");
 		theCount = setInterval(showCountDown, 1000);
 		alarm.load();
 		alarm.play();
-	}, 500);
+	}, 0);
 });
 
 var abort = document.getElementById("abort");
