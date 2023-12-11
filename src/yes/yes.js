@@ -1,18 +1,10 @@
 var music = document.getElementById("music");
 music.volume = 0.5;
 
-window.addEventListener('load', function () {
-  // Request user permission to play audio
-  window.addEventListener('beforeunload', function () {
-    return 'Would you like to play the audio?';
-  });
+document.addEventListener('click', function () {
+  music.load();
+  music.play();
 
-  // Play the audio only if user confirms permission
-  document.addEventListener('unload', function () {
-    music.load();
-    music.seek(10.1);
-    music.play();
-  });
 });
 
 var canvas = document.querySelector("canvas"),
