@@ -1,9 +1,17 @@
 var music = document.getElementById("music");
 music.volume = 0.5;
+let started = false;
 
 document.addEventListener('click', function () {
-  music.load();
-  music.play();
+  if (!started){
+    started = true;
+    music.load();
+    music.play();
+  }
+  
+  setTimeout(function () {
+    started = false;
+  }, 251000);
 
 });
 
